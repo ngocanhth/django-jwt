@@ -9,6 +9,7 @@ env\scripts\active -->
  pip install django
 
  django-admin startproject backend
+ python manage.py startapp courses
 
 cd backend
 
@@ -17,3 +18,7 @@ cd backend
  pip install djangorestframework
 
 pip freeze > requirements.txt
+
+winpty python manage.py createsuperuser
+
+python manage.py sqlmigrate course 0001
